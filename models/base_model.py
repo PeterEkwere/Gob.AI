@@ -48,6 +48,8 @@ class BaseModel:
                 obj[key] = value
         obj['__class__'] = self.__class__.__name__
         
+        return obj
+        
                         
     
 
