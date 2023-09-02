@@ -11,11 +11,11 @@ from models.base_model import BaseModel
 class FileStorage:
     """ This is the Class that will handle:
                 json serialization and deserialization of Data
-                storing of objects to file
+                and also storing of objects to file
     """
     
-    PATH = "file.json"
-    objects = {}
+    __PATH = "./file.json"
+    __objects = {}
     
     def all(self):
         """ This Function Returns all objects
@@ -25,7 +25,7 @@ class FileStorage:
     def new(self, obj):
         """ This function sets a new object in the objects dictionary with its id
         """
-        obj_id = f"{obj.__class__.name}.{obj.id}"
+        obj_id = f"{obj.__class__.__name__}.{obj.id}"
         self.__objects[obj_id] = obj
         
     def save(self):
@@ -36,3 +36,7 @@ class FileStorage:
             for key, value in self.__objects.items():
                 new_dict[key] = value.to_dict()
             json_dump(new_dict, a)
+            
+    def reload(self):
+        """ This function deserializes an object from a json file
+        """
