@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Unittest for BaseModel"""
 import unittest
-from models.base_model import BaseModel
+from .. import models
+import sys
+sys.path.append("..")
 
 
 class TestBaseModel(unittest.TestCase):
@@ -9,23 +11,23 @@ class TestBaseModel(unittest.TestCase):
 
     def test_to_dict1(self):
         """test to_dict method"""
-        my_model = BaseModel()
+        my_model = models.BaseModel()
         my_model.name = "My First Model"
         my_model.my_number = 89
         obj = my_model.to_dict()
 
-        new_model = BaseModel(**obj)
+        new_model = models.BaseModel(**obj)
 
         self.assertDictEqual(obj, new_model.to_dict())
 
     def test_to_dict2(self):
         """test to_dict method"""
-        model = BaseModel()
+        model = models.BaseModel()
         model.name = "My First Model"
         model.my_number = 89
         obj = model.to_dict()
 
-        new_model = BaseModel(**obj)
+        new_model = models.BaseModel(**obj)
 
         self.assertNotEqual(model, new_model)
 
@@ -36,7 +38,7 @@ class TestBaseModel(unittest.TestCase):
             'name': 'Test Model',
             'value': 'Model'
         }
-        bm = BaseModel(**obj)
+        bm = models.BaseModel(**obj)
 
         self.assertDictEqual(obj, bm.to_dict())
 
@@ -48,7 +50,7 @@ class TestBaseModel(unittest.TestCase):
             'name': 'Test Model',
             'value': 'Model',
         }
-        bm = BaseModel(**obj)
+        bm = models.BaseModel(**obj)
 
         self.assertEqual(
             "[BaseModel] (1234) {'__class__': 'BaseModel', 'id': \
@@ -66,4 +68,4 @@ class TestBaseModel(unittest.TestCase):
             'created_at': 'asskrr'
         }
         with self.assertRaises(ValueError):
-            bm = BaseModel(**obj)
+            bm = models.BaseModel(**obj)

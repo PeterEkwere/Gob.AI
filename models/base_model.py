@@ -6,6 +6,8 @@
 from uuid import uuid4
 from datetime import datetime
 import models
+import sys
+sys.path.append("..")
 
 class BaseModel:
     """Defines all common methods and attributes
@@ -14,12 +16,14 @@ class BaseModel:
         if len(kwargs) > 0:
             for key, value in kwargs.items():
                 if key in ["updated_at", "created_at"]:
-                    val = datetime.fromisoformat(val)
-                    self.__dict__[key] = val
+                    val = datetime.fromisoformat(value)
+                    self.__dict__[key] = value
+                if kwargs.get("id", None) is None:
+                    self.id = str(uuid4())
         else:
-            self.id = str(uuid4)
-            self.updated_at = datetime.utcnow
-            self.created_at = datetime.utcnow
+            self.id = str(uuid4())
+            self.updated_at = datetime.utcnow()
+            self.created_at = datetime.utcnow()
             models.storage.new(self)
 
     def __str__(self) -> str:
@@ -28,12 +32,12 @@ class BaseModel:
         Returns:
             str: A String Representation
         """
-        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+        return "[{:s}] ({:s}) {}".format(self.__class__.__name__, self.id, self.__dict__)
     
     def save(self):
         """ This is the Save method
         """
-        self.updated_at = datetime.utcnow
+        self.updated_at = datetime.utcnow()
         models.storage.save()
         
     def to_dict(self):
@@ -43,7 +47,7 @@ class BaseModel:
         
         for key, value in self.__dict__.items():
             if type(value) is datetime:
-                obj[key] = value.isoformat
+                obj[key] = value.isoformat()
             else:
                 obj[key] = value
         obj['__class__'] = self.__class__.__name__
