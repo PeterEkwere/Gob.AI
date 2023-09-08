@@ -3,8 +3,11 @@
     This is the Recipe class
     Author: Peter Ekwere
 """
+from models.base_model import BaseModel
 from uuid import uuid4
-class Ingredient():
+
+
+class Recipe(BaseModel):
     """Represents a recipe in the system.
 
     Attributes:

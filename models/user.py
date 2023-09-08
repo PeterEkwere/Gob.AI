@@ -23,5 +23,6 @@ class User(BaseModel):
     lase_name = ""
     
     def __init__(self, *args, **kwargs):
-        self.id = str(uuid4())
+        """ This is the User class
+        """
         super().__init__(*args, **kwargs)
