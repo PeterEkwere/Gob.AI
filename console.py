@@ -4,6 +4,7 @@
     Author: Peter Ekwere
 """
 import cmd
+import sys
 from models.base_model import BaseModel
 from models.comment import Comment
 from models.ingredients import Ingredient
@@ -11,6 +12,7 @@ from models.recipe import Recipe
 from models.user import User
 from models.__init__ import storage
 from models.__init__ import FileStorage
+sys.path.append("..")
 
 class Gob_console(cmd.Cmd):
     """ Gob_console is a command-line console for managing The Gob web app
@@ -135,14 +137,17 @@ class Gob_console(cmd.Cmd):
             for key, value in class_dict.items():
                 class_name = value.__class__.__name__
                 if class_name == Class:
-                    model_list.append(str(class_dict[key]))
+                    model = str(class_dict[key])
+                    print(model)
+                    model_list.append(model)
             print(model_list)
         else:
             model_list = []
             class_dict = storage.all()
             
             for an_object in class_dict:
-                model_list.append(str(class_dict[an_object]))
+                model = str(class_dict[an_object])
+                model_list.append(model)
             print(model_list)
             
     def do_count(self, args):
@@ -166,7 +171,9 @@ class Gob_console(cmd.Cmd):
                     class_name = value.__class__.__name__
                     if Class == class_name:
                         count += 1
-                print(count)     
+                print(count)
+                
+   #def do_update()   
         
             
     
