@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="../static/styles/index.css">
         <title>Gob.AI</title>
-        <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <header>
             <h1 class="logo"><span class="rotate-letter">G</span>ob.<b>AI</b></h1>
 
             <nav>
-                <a href="explore.html">Browse recipe</a>
+                <a href="{{ url_for('explore') }}">Browse Recipe</a>
                 <a href="">Create</a>
-                <a href="Login.html">Login</a>
+                <a href="{{ url_for('login') }}">Login</a>
             </nav>
 
-            <a href=""><button class="sbtn">Create Account</button></a>
+            <a href="{{ url_for('signup') }}"><button class="sbtn">Create Account</button></a>
         </header>
 
         <div class="main">
@@ -71,7 +71,7 @@
                         <div class="margin2"></div>
 
                <div class="img-box2">
-                        <img src="img/feature-fridge.webp" class="box-img2">
+                        <img src="../static/img/feature-fridge.webp" class="box-img2">
                     <div>
                         <h3 class="box-h3">Reduce Waste - Save Money</h3>
                         <p class="box-p">Maximize your pantry and cut down on food waste with Gob.AI's intelligent recipe
@@ -87,11 +87,11 @@
                         generator.Just input the ingredients you have on hand, and our AI assistant will<br> suggest
                         unique recipes.Less waste, more savings.</p>
                     </div>
-                        <img src="img/feature-plate.webp" class="box-img3">
+                        <img src="../static/img/feature-plate.webp" class="box-img3">
                </div>
 
                <div class="img-box2">
-                        <img src="img/feature-planner.webp" class="box-img2">
+                        <img src="../static/img/feature-planner.webp" class="box-img2">
                     <div>
                         <h3 class="box-h3">Reduce Waste - Save Money</h3>
                         <p class="box-p">Maximize your pantry and cut down on food waste with Gob.AI's intelligent recipe
@@ -102,6 +102,6 @@
             </div>
 
        </div>
-        <script src="script.js"></script>
+        
     </body>
 </html>

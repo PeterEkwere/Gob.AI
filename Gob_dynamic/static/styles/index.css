@@ -189,7 +189,7 @@ input{
 
 .img1{
 
-    background-image: url('img/blondies-stacked-3L6A.jpg');
+    background-image: url('../img/blondies-stacked-3L6A.jpg');
     height: 200px;
     width: 250px;
     border-radius: 15px 15px 0 0;
@@ -199,7 +199,7 @@ input{
 
 .img2{
 
-    background-image: url('img/Sweet_Potato_Stew_Pan-4cHY.jpg');
+    background-image: url('../img/Sweet_Potato_Stew_Pan-4cHY.jpg');
     height: 200px;
     width: 250px;
     border-radius: 15px 15px 0 0;
@@ -209,7 +209,7 @@ input{
 
 .img3{
 
-    background-image: url('img/Quinoa-Skillet-7YXS.jpg');
+    background-image: url('../img/Quinoa-Skillet-7YXS.jpg');
     height: 200px;
     width: 250px;
     border-radius: 15px 15px 0 0;
@@ -219,7 +219,7 @@ input{
 
 .img4{
 
-    background-image: url('img/cream_sauce_pan-6g9r.jpg');
+    background-image: url('../img/cream_sauce_pan-6g9r.jpg');
     height: 200px;
     width: 250px;
     border-radius: 15px 15px 0 0;

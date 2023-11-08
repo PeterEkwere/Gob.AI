@@ -2,20 +2,20 @@
 <html lang="en">
     <head>
         <title>Gob.AI</title>
-        <link rel="stylesheet" href="signup.css">
+        <link rel="stylesheet" href="../static/styles/signup.css">
     </head>
 <body>
     <div class="body">
         <header>
-             <h1 class="logo"><a href="index.html">Gob.AI</a></h1>
+             <h1 class="logo"><a href="{{ url_for('Home') }}">Gob.AI</a></h1>
      
              <nav>
-                 <a href="explore.html">Browse recipe</a>              
+                 <a href="{{ url_for('explore') }}">Browse recipe</a>              
                  <a href="" >Create</a>
-                 <a href="Login.html">Login</a>
+                 <a href="{{ url_for('login') }}">Login</a>
              </nav>
      
-             <a href="Signup.html"><button class="sbtn">Create Account</button></a>
+             <a href="{{ url_for('signup') }}"><button class="sbtn">Create Account</button></a>
         </header>
     
         <div class="box">
@@ -36,7 +36,7 @@
 
             <button class="button1">Submit</button>
             <div class="margin"></div>
-            <button class="button2"><img src="img/2993685_brand_brands_google_logo_logos_icon.png" class="google">Sign up with Google</button>
+            <button class="button2"><img src="../static/img/2993685_brand_brands_google_logo_logos_icon.png" class="google">Sign up with Google</button>
         </div>
     </div>
 </body>

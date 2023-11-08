@@ -2,20 +2,20 @@
 <html lang="en">
     <head>
         <title>Gob.AI</title>
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="../static/styles/login.css">
     </head>
     <body>
         <div class="body">
             <header>
-                <h1 class="logo"><a href="index.html">Gob.AI</a></h1>
+                <h1 class="logo"><a href="{{ url_for('Home') }}">Gob.AI</a></h1>
         
                 <nav>
-                    <a href="explore.html">Browse recipe</a>              
+                    <a href="{{ url_for('explore') }}">Browse recipe</a>              
                     <a href="" >Create</a>
-                    <a href="Login.html">Login</a>
+                    <a href="{{ url_for('login') }}">Login</a>
                 </nav>
         
-                <a href="Signup.html"><button class="sbtn">Create Account</button></a>
+                <a href="{{ url_for('signup') }}"><button class="sbtn">Create Account</button></a>
              </header>
     
         <div class="box">
