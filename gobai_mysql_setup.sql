@@ -17,8 +17,7 @@ CREATE TABLE `users` (
   `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `email` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
-  `first_name` varchar(128) DEFAULT NULL,
-  `last_name` varchar(128) DEFAULT NULL,
+  `user_name` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -29,15 +28,15 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('00a11245-12fa-436e-9ccc-967417f8c30a','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail6@gmail.com','pwd6','Todd','Seanez'),
-('00e93fc3-53ff-4da4-8e72-faa5216f81bb','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail28@gmail.com','pwd28','Richard','Steere'),
-('150e591e-486b-48ee-be42-4aecba665020','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail23@gmail.com','pwd23','Cecilia','Boes'),
-('30a890e4-a62c-44f9-abc0-07e2c74021da','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail2@gmail.com','pwd2','David','Meador'),
-('32c11d3d-99a1-4406-ab41-7b6ccb7dd760','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail18@gmail.com','pwd18','Susan','Finney'),
-('3ea61b06-e22a-459b-bb96-d900fb8f843a','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail8@gmail.com','pwd8','Melissa','Ward'),
-('3fda0d5c-fea4-4920-bc91-6e6c6663d161','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail12@gmail.com','pwd12','Robert','Graham'),
-('426624f6-84a9-4ec4-84f3-7655dc70e86e','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail19@gmail.com','pwd19','Gail','Mccarthy'),
-('fa44780d-ac48-41ab-9dd0-ac54a15755cf','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail20@gmail.com','pwd20','Leon','Sarro');
+INSERT INTO `users` VALUES ('00a11245-12fa-436e-9ccc-967417f8c30a','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail6@gmail.com','pwd6','Todd'),
+('00e93fc3-53ff-4da4-8e72-faa5216f81bb','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail28@gmail.com','pwd28','Richard'),
+('150e591e-486b-48ee-be42-4aecba665020','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail23@gmail.com','pwd23','Cecilia'),
+('30a890e4-a62c-44f9-abc0-07e2c74021da','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail2@gmail.com','pwd2','David'),
+('32c11d3d-99a1-4406-ab41-7b6ccb7dd760','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail18@gmail.com','pwd18','Susan'),
+('3ea61b06-e22a-459b-bb96-d900fb8f843a','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail8@gmail.com','pwd8','Melissa'),
+('3fda0d5c-fea4-4920-bc91-6e6c6663d161','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail12@gmail.com','pwd12','Robert'),
+('426624f6-84a9-4ec4-84f3-7655dc70e86e','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail19@gmail.com','pwd19','Gail'),
+('fa44780d-ac48-41ab-9dd0-ac54a15755cf','2017-03-25 02:17:06','2017-03-25 02:17:06','noemail20@gmail.com','pwd20','Leon');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

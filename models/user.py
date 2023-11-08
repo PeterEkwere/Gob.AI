@@ -1,28 +1,34 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 """
-    This is the User class
+    This Module contains the User class
     Author: Peter Ekwere
 """
-from models.base_model import BaseModel
-from uuid import uuid4
-class User(BaseModel):
-    """Represents a user in the system.
+import models
+from models.base_model import BaseModel, Base
+from os import getenv
+from sqlalchemy import Column, String
+from sqlalchemy.orm import relationship
+from hashlib import md5
 
-    Attributes:
-        first_name (str): The unique username of the user.
-        email (str): The email address associated with the user.
-        password (str): The Password for the email address
-        last_name (str): last name of the user
+class User(BaseModel, Base):
+    """Representation of a user """
+    if models.storage_type == 'db':
+        __tablename__ = 'users'
+        email = Column(String(128), nullable=False)
+        password = Column(String(128), nullable=False)
+        user_name = Column(String(128), nullable=True)
+        recipes = relationship("Recipe", backref="user")
+    else:
+        email = ""
+        password = ""
+        user_name = ""
 
-    Args:
-        BaseModel (Class type): This is the parent function that handles global attributes/methods
-    """
-    email = ""
-    password = ""
-    first_name = ""
-    lase_name = ""
-    
     def __init__(self, *args, **kwargs):
-        """ This is the User class
-        """
+        """initializes user"""
         super().__init__(*args, **kwargs)
+
+    def __setattr__(self, name, value):
+        """sets a password with md5 encryption"""
+        if name == "password":
+            value = md5(value.encode()).hexdigest()
+        super().__setattr__(name, value)

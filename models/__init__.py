@@ -3,7 +3,6 @@
     Initialzes the models storage based on the environment
     Author: Peter Ekwere
 """
-import models
 from os import getenv
 
 storage_type = getenv("GOBAI_TYPE_STORAGE")

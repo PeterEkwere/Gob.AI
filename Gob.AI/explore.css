@@ -1,0 +1,383 @@
+body{
+
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@font-face {
+    font-family: myfont;
+    src: url(fonts/AngelFoods-jEMBv.ttf);
+}
+
+header{
+
+    
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    
+
+}
+
+.logo{
+
+    font-size: 35px;
+    color: black;
+    display: inline;
+    position: relative;
+    top: 15px;
+    margin-left: 100px;
+    
+}
+
+h1, a{
+
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+
+    display: inline;
+    position: absolute;
+    left: 350px;
+    top: 38px;
+}
+
+nav a{
+
+    text-decoration: none;
+    position: relative;
+    color: #999999;
+    margin-right: 40px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 5px;
+    width: 200px;
+    transition: 0.3s;
+    
+}
+
+nav a:hover{
+
+    color: black;
+    transition: 0.5s;
+   
+    
+}
+
+.sbtn{
+
+    position: absolute;
+    right: 180px;
+    top: 28px;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    width: 160px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+
+
+}
+
+.sbtn:hover{
+
+    color: black;
+    background-color: white;
+}
+
+.banner{
+
+    background-color: rgb(240, 156, 95);
+    height: 70px;
+    padding-top: 40px;
+    margin-top: 20px;
+}
+
+.banner-h1{
+
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 0px;
+    
+}
+
+.side-row{
+
+    background-color: rgb(37, 37, 37);
+    margin-top: 50px;
+    color: white;
+    width: 280px;
+    height: 620px;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 15px;
+
+}
+
+.margin1{
+
+    border-bottom: 1px solid white;
+    position: relative;
+    margin-left: 25px;
+    width: 80%;
+    
+}
+
+#inputRecipe{
+
+    border: none;
+    margin-top: 20px;
+    height: 40px;
+    width: 80%;
+    border-radius: 30px;
+
+}
+
+.search-btn{
+
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(240, 156, 95);
+    width: 80%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.p1{
+
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.slider{
+
+    margin-top: 10px;
+    margin-bottom: 30px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 80%;
+    color: rgb(240, 156, 95);
+    
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 30px; 
+    height: 30px; 
+    background: rgb(240, 156, 95);
+    cursor: pointer;
+  }
+
+#checkbox1 {
+    position: relative;
+    display: inline;
+    margin-top: 20px;
+}
+
+.mysvg{
+
+    fill: white !important;
+}
+
+.mysvg:hover{
+
+    fill: gold !important;
+}
+
+.filter-btn{
+
+    border: none;
+    border-radius: 30px;
+    background-color: rgb(240, 156, 95);
+    width: 80%;
+    height: 40px;
+    margin-top: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.second-h2{
+
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    font-size: 25px;
+    left: 450px;
+    margin-top: 50px;
+}
+
+.margin2{
+
+    border-bottom: 1px solid rgb(200, 200, 200);
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    width: 785px;
+    
+}
+
+.container{
+
+    display: flex;
+}
+
+.img-box1{
+
+    padding-bottom: 5px;
+    padding-right: 0;
+    border: 1px solid transparent;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e0dede;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 0px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: fit-content;
+
+}
+
+.img-box{
+
+    padding-bottom: 5px;
+    padding-right: 0;
+    border: 1px solid transparent;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: #e0dede;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    width: 250px;
+    height: fit-content;
+
+}
+
+.top-space{
+    margin-top: 105px;
+}
+
+
+.img1{
+
+    background-image: url('img/blondies-stacked-3L6A.jpg');
+    height: 200px;
+    width: 250px;
+    border-radius: 15px 15px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img2{
+
+    background-image: url('img/Sweet_Potato_Stew_Pan-4cHY.jpg');
+    height: 200px;
+    width: 250px;
+    border-radius: 15px 15px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img3{
+
+    background-image: url('img/Quinoa-Skillet-7YXS.jpg');
+    height: 200px;
+    width: 250px;
+    border-radius: 15px 15px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.caption2{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 120px;
+    margin-top: 10px;
+    font-size: 15px;
+
+}
+
+.caption1{
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px
+}
+
+.colored{
+
+    color: rgb(240, 156, 95);
+}
+
+.third-h2{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    font-size: 25px;
+    left: 480px;
+    margin-top: 50px;
+}
+
+.first{
+
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    margin-left: 5%;
+}
+
+.second{
+    display: flex; 
+    flex-direction: row; 
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.third{
+    display: flex;
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .side-row{
+        width: 80%;
+        text-align: center;
+        margin-left: 10%;
+
+    }
+
+    .margin1, .margin2{
+        width: 80%;
+        margin-left: 10%;
+
+    }
+
+    
+  }
+  
