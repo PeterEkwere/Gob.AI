@@ -7,15 +7,15 @@
 </head>
 <body>
     <header>
-        <h1 class="logo"><a href="index.html" class="logo-link">Gob.AI</a></h1>
+        <h1 class="logo"><a href="{{ url_for('Home') }}" class="logo-link">Gob.AI</a></h1>
 
         <nav>
-            <a href="">Browse recipe</a>
+            <a href="{{ url_for('explore') }}">Browse recipe</a>
             <a href="">Create</a>
-            <a href="Login.html">Login</a>
+            <a href="{{ url_for('login') }}">Login</a>
         </nav>
 
-            <a href="Signup.html"><button class="sbtn">Create Account</button></a>
+            <a href="{{ url_for('signup') }}"><button class="sbtn">Create Account</button></a>
     </header>
 
     <div class="banner">

@@ -182,7 +182,7 @@ class Gob_console(cmd.Cmd):
         else:  # class name not present
             print("** class name missing **")
             return
-        if c_name not in Gob_console.classes:  # class name invalid
+        if c_name not in Gob_console.class_names.values():  # class name invalid
             print("** class doesn't exist **")
             return
 

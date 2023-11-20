@@ -5,7 +5,7 @@
 """
 from models import storage
 from models.user import User
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 import uuid
 app = Flask(__name__)
 
@@ -21,7 +21,7 @@ def hbnb():
     """ Home Route"""
     return render_template('index.html',
                            cache_id=str(uuid.uuid4()))
-    
+
 @app.route('/login/', strict_slashes=False, endpoint='login')
 def hbnb():
     """ Login Route"""
@@ -38,6 +38,12 @@ def hbnb():
 def hbnb():
     """ Browse Recipes Route"""
     return render_template('explore.html',
+                           cache_id=str(uuid.uuid4()))
+    
+@app.route('/dashboard/', strict_slashes=False, endpoint='dashboard')
+def hbnb():
+    """ Browse Recipes Route"""
+    return render_template('myaccount.html',
                            cache_id=str(uuid.uuid4()))
 
 if __name__ == "__main__":

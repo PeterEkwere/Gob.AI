@@ -3,6 +3,8 @@
     <head>
         <title>Gob.AI</title>
         <link rel="stylesheet" href="../static/styles/login.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script type="text/javascript" src="../static/scripts/login.js?{{ cache_id }}"></script>
     </head>
     <body>
         <div class="body">
@@ -19,6 +21,9 @@
              </header>
     
         <div class="box">
+            <div id="loading-spinner" class="spinner-box">
+                <div class="three-quarter-spinner"></div>
+            </div>              
                 <h1 class="login-banner">Login</h1>
                 <input type="text" name="email" placeholder="Email Address"><br>
                 <input type="password" name="password" placeholder="password"><br>
@@ -26,7 +31,7 @@
                 <input type="checkbox" name="checkbox">
                 <p class="p1"> Remember me</p> <p class="p2"><a href=""> Forgot password ?</a></p>
             </div>
-                <button class="button">Login</button>
+                <button id="submitButton"  class="button">Login</button>
         </div>
     </div>
     </body>
