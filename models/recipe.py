@@ -48,3 +48,20 @@ class Recipe(BaseModel, Base):
         def ingredients(self):
             """getter attribute returns the list of ingredient instances"""
             return self.ingredients
+        
+    def process_recipe_data(recipe_data):
+        """ This method takes a spooncular recipe data ane processes it
+
+        Args:
+            recipe_data (str): This is a json response
+        """
+        response_data = {
+            'recipe': recipe_data[0]['name'],
+            'instructions': []
+        }
+        
+        #Extract instructions
+        for instruction_step in recipe_data[0]['steps']:
+            response_data['instructions'].append(instruction_step['step'])
+            
+        return response_data

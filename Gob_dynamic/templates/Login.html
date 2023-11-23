@@ -18,21 +18,35 @@
                 </nav>
         
                 <a href="{{ url_for('signup') }}"><button class="sbtn">Create Account</button></a>
-             </header>
+            </header>
     
-        <div class="box">
-            <div id="loading-spinner" class="spinner-box">
-                <div class="three-quarter-spinner"></div>
-            </div>              
-                <h1 class="login-banner">Login</h1>
-                <input type="text" name="email" placeholder="Email Address"><br>
-                <input type="password" name="password" placeholder="password"><br>
-            <div class="checkboxx2">
-                <input type="checkbox" name="checkbox">
-                <p class="p1"> Remember me</p> <p class="p2"><a href=""> Forgot password ?</a></p>
+             <div class="box">
+                <div id="loading-spinner" class="spinner-box">
+                    <div class="three-quarter-spinner"></div>
+                </div>              
+                    <h1 class="login-banner">Login</h1>
+                    <input type="text" name="email" placeholder="Email Address"><br>
+                    <input type="password" name="password" placeholder="password"><br>
+                <div class="checkboxx2">
+                    <input type="checkbox" name="checkbox">
+                    <p class="p1"> Remember me</p> <p class="p2"><a href=""> Forgot password ?</a></p>
+                </div>
+                    <button id="submitButton"  class="button">Login</button>
             </div>
-                <button id="submitButton"  class="button">Login</button>
-        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <h3>Gob.<span style="color: white; font-size: 35px;">AI</span></h3>
+            <p class="footer-p">Gob.AI is a revolutionary AI Recipe generator. Input your ingredients and preference<br>
+                And our algorithm crafts unique AI recipe on demand. Explore innovative culinary<br>
+                 creations and elevate your meal planning with GOb.AI.
+            </p>
+    
+            <div class="margin2"></div>
+    
+            <p class="footer-p">Copyright @ GOb.AI 2023 **</p>
+        </footer>
     </div>
     </body>
 </html>

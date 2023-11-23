@@ -68,6 +68,7 @@
 
 
 
+
 body{
 
     margin: 0;
@@ -121,7 +122,8 @@ nav a{
     color: #999999;
     margin-right: 40px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-bottom: 5px;
     width: 200px;
     transition: 0.3s;
@@ -146,7 +148,7 @@ nav a:hover{
     border: none;
     width: 160px;
     border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: black;
     color: white;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
@@ -164,7 +166,7 @@ nav a:hover{
 h2{
 
     font-size: 47px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 70px;
     text-align: center;
 
@@ -173,7 +175,7 @@ h2{
 
 .body{
 
-    background-image: url('../img/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg');
+    background-image: url("../img/hermes-rivera-Ww8eQWjMJWk-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 650px;
@@ -200,7 +202,7 @@ h2{
 
 .login-banner{
 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 40px;
    
 }
@@ -211,7 +213,7 @@ input[type='text']{
     height: 40px;
     margin-bottom: 22px;
     padding-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 10px;
     border: 2px solid black;
     
@@ -223,7 +225,7 @@ input[type='password']{
     height: 40px;
     margin-bottom: 10px;
     padding-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border-radius: 10px;
     border: 2px solid black;
 
@@ -237,7 +239,7 @@ input[type='checkbox']{
 .p1{
 
     
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     font-weight: 700;
 }
 
@@ -245,7 +247,7 @@ input[type='checkbox']{
 
    
     margin-left: 45px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
     
     
@@ -266,18 +268,22 @@ input[type='checkbox']{
 }
 
 .button{
-    border: 1px solid black;
-    font-size: 16px;
+
+   
+    border: 1px solid transparent;
     border-radius: 30px;
-    padding: 8px 10px;
+    margin-top: 20px;
+    padding: 10px;
     width: 250px;
     background-color: black;
     text-decoration: none;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
+    font-size: 15px;
+    transition: 0.5s;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+
 }
 
 .button:hover {
@@ -307,12 +313,11 @@ input[type='checkbox']{
     background-color: white;
     text-decoration: none;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
     transition: 0.5s;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
-
 
 .three-quarter-spinner {
     width: 50px;
@@ -321,9 +326,9 @@ input[type='checkbox']{
     border-top: 3px solid transparent;
     border-radius: 50%;
     animation: spin .5s linear 0s infinite;
-  }
+}
   
-  .spinner-box {
+.spinner-box {
     display: none; /* Initially hide the spinner */
     position: fixed;
     top: 50%;
@@ -334,10 +339,37 @@ input[type='checkbox']{
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  }
+}
   
 
 
+.footer{
+
+    background-color: #000;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #999999;
+}
+
+h3{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-p{
+    font-weight: 600;
+}
+
+.margin2{
+
+    border-bottom: 1px solid #999999;
+    margin-left: 35%;
+    margin-top: 10px;
+    width: 400px;
+    
+}
 
 
 

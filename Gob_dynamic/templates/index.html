@@ -6,7 +6,7 @@
     </head>
     <body>
         <header>
-            <h1 class="logo"><span class="rotate-letter">G</span>ob.<b>AI</b></h1>
+            <h1 class="logo">Gob.<b>AI</b></h1>
 
             <nav>
                 <a href="{{ url_for('explore') }}">Browse Recipe</a>
@@ -23,42 +23,100 @@
         <p class="p1">Simply type a recipe idea or some ingredients you have on hand and DishGen's AI will<br>
              instantly generate an all-new recipe on command</p>
 
-        <div class="flex-div1" style="display: flex;">
+        <div class="flex-div1">
             <input type="text" placeholder="Create a recipe for...">
             <button id="myBtn" class="btn">Generate!</button>
         </div>
 
-        <p class="p2">Try: <span class="s1"></span></p>
+        <div class="recipe-result">
+            <h2 class="result-h2">Mango Curry Rice</h2>
+            <p class="result-p1">Experience the perfect blend of sweet and spicy with this delectable
+                 mango curry rice recipe. Tender chunks of mango, aromatic spices,<br>
+                  and creamy coconut milk create a symphony of flavors, perfectly 
+                  complemented by fluffy basmati rice. Indulge in this tropical 
+                  twist on<br> a classic curry dish that is sure to transport your
+                   taste buds to paradise.</p>
 
+                   <div class="ingredients-steps">
+                    <div class="ingredients">
+
+                        <h3 class="ingredients-h3">Ingredients</h3>
+
+                        <ul class="ingredients-ul">
+                            <li>2 ripe mangoes, peeled and cubed</li>
+                            <li>1 lb boneless chicken breast, cut into bite-sized pieces</li>
+                            <li>1 large onion, finely chopped</li>
+                            <li>3 garlic cloves, minced</li>
+                            <li>1-inch piece of ginger, grated</li>
+                            <li>1 red bell pepper, sliced</li>
+                            <li>1 can (14 oz) coconut milk</li>
+                            <li>2 tablespoons curry powder</li>
+                            <li>1 teaspoon turmeric powder</li>
+                            <li>1 teaspoon cumin powder</li>
+                            <li>1 teaspoon coriander powder</li>
+                            <li>1 tablespoon vegetable oil</li>
+                            <li>Salt and pepper, to taste</li>
+                            <li>Fresh cilantro, for garnish</li>
+                        </ul>
+                    </div>
+
+                    <div class="steps">
+
+                        <h3 class="steps-h3">Steps</h3>
+
+                        <ol class="steps-ol">
+                            <li>Heat the vegetable oil in a large skillet over medium heat.<br>
+                                 Add the chopped onion and sauté until translucent.</li>
+                            <li>Add the minced garlic and grated ginger to the skillet.<br>
+                                 Cook for another minute, stirring occasionally.</li>
+                            <li>Incorporate the curry powder, turmeric powder,<br>
+                                 cumin powder, and coriander powder. Toast the spices<br>
+                                  for about a minute to unlock their flavors.</li>
+                            <li>Add the chicken pieces to the skillet and cook until<br>
+                                 browned on all sides.</li>
+                            <li>Pour in the coconut milk and stir well to combine.<br>
+                                 Bring the mixture to a gentle simmer.</li>
+                            <li>Add the bell pepper slices and cubed mangoes to the skillet.<br>
+                                 Season with salt and pepper to taste. Simmer for about<br> 15-20 minutes
+                                  until the chicken is cooked through and the flavors<br> are well blended.</li>
+                            <li>Serve the sizzling spiced mango curry over steamed jasmine rice,<br>
+                                 garnishing with fresh cilantro leaves</li>
+                        </ol>
+                    </div>     
+                </div>
+                    <p class="result-p2">NOTE: This recipe is AI-generated and DishGen has not verified it for accuracy or safety.<br>
+                    It may contain errors.Always use your best judgement when making AI-generated dishes.</p>
+        </div>
+        
         <div class="margin"></div>
 
-       <div class="container">
+    <div class="container">
         <div class="img-box">
             <div class="img1"></div>
-            <div  class="caption1">Egusi soup</div>
+            <div  class="caption1">Healthy Cookie Dough</div>
             <div class="caption2">2/3/2023 <span class="colored">sully</span></div>
         </div>
 
         <div class="img-box">
             <div class="img2"></div>
-            <div  class="caption1">Rice and beans</div>
+            <div  class="caption1">Potatoe Carrot Stir </div>
             <div class="caption2">4/6/2023 <span class="colored">dushane</span></div>
         </div>
 
         <div class="img-box">
             <div class="img3"></div>
-            <div  class="caption1">Spicy Quinoa Skillet with Cashew Cream</div>
+            <div  class="caption1">Spicy Quinoa Skillet</div>
             <div class="caption2">12/2/2023 <span class="colored">camolly</span></div>
         </div>
 
         <div class="img-box">
             <div class="img4"></div>
-            <div  class="caption1">Berries</div>
+            <div  class="caption1">Creamy Tofu Spahgetti</div>
             <div class="caption2">17/2/2021 <span class="colored">jaq</span></div>
         </div>
        </div>
 
-       <div class="second">
+       <div class="second" style="display: flex; flex-direction: column;" >
                          <h3>OVER 30,000 RECIPES CREATED</h3>
 
                         <p class="secondp1">AI-Powered Recipe Magic</p>
@@ -71,37 +129,51 @@
                         <div class="margin2"></div>
 
                <div class="img-box2">
-                        <img src="../static/img/feature-fridge.webp" class="box-img2">
+                <img src="../static/img/feature-fridge.webp" class="box-img2">
                     <div>
                         <h3 class="box-h3">Reduce Waste - Save Money</h3>
-                        <p class="box-p">Maximize your pantry and cut down on food waste with Gob.AI's intelligent recipe
-                        generator.Just input the ingredients you have on hand, and our AI assistant will<br> suggest
+                        <p class="box-p">Maximize your pantry and cut down on food waste with Gob.AI's intelligent<br> recipe
+                        generator.Just input the ingredients you have on hand, and our AI<br> assistant will suggest
                         unique recipes.Less waste, more savings.</p>
                     </div>
                </div>
 
                <div class="img-box2">
                     <div>
-                        <h3 class="box-h3">Reduce Waste - Save Money</h3>
-                        <p class="box-p">Maximize your pantry and cut down on food waste with Gob.AI's intelligent recipe
-                        generator.Just input the ingredients you have on hand, and our AI assistant will<br> suggest
-                        unique recipes.Less waste, more savings.</p>
+                        <h3 class="box-h3">Generate and Modify infinite Recipes </h3>
+                        <p class="box-p">With Gob.AI, a truly infite world of cullinary possibilities are at your finger tips.<br>
+                        Each time you search, Our smart AI-driven recipe assistant invents a new<br> recipe from scratch suggest
+                        if its not perfect on the first try you can<br> even request changes in real time.</p>
                     </div>
-                        <img src="../static/img/feature-plate.webp" class="box-img3">
+                    <img src="../static/img/feature-plate.webp" class="box-img3">
                </div>
 
                <div class="img-box2">
-                        <img src="../static/img/feature-planner.webp" class="box-img2">
+                <img src="../static/img/feature-planner.webp" class="box-img2">
                     <div>
-                        <h3 class="box-h3">Reduce Waste - Save Money</h3>
-                        <p class="box-p">Maximize your pantry and cut down on food waste with Gob.AI's intelligent recipe
-                        generator.Just input the ingredients you have on hand, and our AI assistant will<br> suggest
-                        unique recipes.Less waste, more savings.</p>
+                        <h3 class="box-h3">Creative Meal Planning in a Snap</h3>
+                        <p class="box-p"> Meal planning is a breeze with Gob.AI, say goodbye to hours spent browsing<br>
+                        cook books or searching recipe blogs or ideas, Our powerfull idea creator can <br> provide 
+                        several suggestions for any requirments or list of ingredients.</p>
                     </div>
                </div>
             </div>
 
        </div>
-        
+
+       <div class="footer">
+        <footer>
+            <h4>Gob.<span style="color: white; font-size: 35px;">AI</span></h4>
+            <p class="footer-p">Gob.AI is a revolutionary AI Recipe generator. Input your ingredients and preference<br>
+                And our algorithm crafts unique AI recipe on demand. Explore innovative culinary<br>
+                 creations and elevate your meal planning with GOb.AI.
+            </p>
+    
+            <div class="margin2"></div>
+    
+            <p class="footer-p">Copyright @ GOb.AI 2023 **</p>
+        </footer>
+    </div>
+        <script src="script.js"></script>
     </body>
 </html>

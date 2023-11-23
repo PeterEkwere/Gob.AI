@@ -7,15 +7,15 @@
 </head>
 <body>
     <header>
-        <h1 class="logo"><a href="{{ url_for('Home') }}" class="logo-link">Gob.AI</a></h1>
+        <h1 class="logo"><a href="index.html" class="logo-link">Gob.AI</a></h1>
 
         <nav>
-            <a href="{{ url_for('explore') }}">Browse recipe</a>
+            <a href="explore.html">Browse recipe</a>
             <a href="">Create</a>
-            <a href="{{ url_for('login') }}">Login</a>
+            <a href="Login.html">Login</a>
         </nav>
 
-            <a href="{{ url_for('signup') }}"><button class="sbtn">Create Account</button></a>
+            <a href="Signup.html"><button class="sbtn">Create Account</button></a>
     </header>
 
     <div class="banner">
@@ -63,10 +63,62 @@
         <div class="margin1"></div>
 
         <h2 class="second-h2">Available Tools</h2>
-        <p>Gob.AI is continiously expandind our suite of AI-powered tool to help you reduce
-            waste, prepare better meals, and streamline the cooking process.
+        <p class="p4">Gob.AI is continiously expandind our suite of AI-powered tool to help you reduce
+            waste, prepare better meals,<br> and streamline the cooking process.
         </p>
+
+        <div class="grid-container">
+            <div class="grid-item purple">
+                <p class="planner-tag">free</p><p class="planner-h1">Recipe Generator</p>
+
+                <img src="img/9023739_magic_wand_fill_icon (1).png" alt=""class="wand">
+                <p class="planner-p1"> AI to generate all new<br> recipe from scratch</p>
+
+                <button class="btn1">Create a recipe</button>
+            </div>
+
+            <div class="grid-item milk">
+                <p class="planner-tag">premium</p><p class="planner-h1">Idea Generator</p>
+
+                <img src="img/8664906_lightbulb_bulb_icon.png" alt=""class="wand">
+                <p class="planner-p1">get 7 ideas for any prompt or list<br>
+                    of ingredients</p>
+
+                <button class="btn1">Create a recipe</button>
+            </div>
+            <div class="grid-item green" >
+                <p class="planner-tag">premium</p><p class="planner-h1">Personalized AI</p>
+
+                <img src="img/9110886_pencil_create_icon.png" alt=""class="wand">
+                <p class="planner-p1">Enter custom instructions that<br> apply to all recipe</p>
+
+                <button class="btn1">Create a recipe</button>
+            </div>
+            <div class="grid-item ash">
+                <p class="planner-tag">premium</p><p class="planner-h1">Meal planner</p>
+
+                <img src="img/8664792_calendar_check_schedule_icon.png" alt=""class="wand">
+                <p class="planner-p1">Create a customized AI-Generated <br>
+                meal plan + recipe</p>
+
+                <button class="btn1">Create a recipe</button>
+            </div>
+        </div>
     </div>
 </div>    
+
+<div class="footer">
+    <footer>
+        <h3>Gob.<span style="color: white; font-size: 35px;">AI</span></h3>
+        <p class="footer-p">Gob.AI is a revolutionary AI Recipe generator. Input your ingredients and preference<br>
+            And our algorithm crafts unique AI recipe on demand. Explore innovative culinary<br>
+             creations and elevate your meal planning with GOb.AI.
+        </p>
+
+        <div class="margin2"></div>
+
+        <p class="footer-p">Copyright @ GOb.AI 2023 **</p>
+    </footer>
+</div>
 </body>
 </html>

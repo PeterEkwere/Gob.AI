@@ -3,48 +3,41 @@
     The Following Objects Handle all RestFul API actions for User login
     Author: Peter Ekwere
 """
-from models.user import User
-from models import storage
+from models.recipe import Recipe
 from api.v1.views import app_views
 from flask import abort, jsonify, make_response, request
 from flasgger.utils import swag_from
 import json
+import requests
+import random
 
 
-@app_views.route('/login', methods=['POST'], strict_slashes=False)
-@swag_from('documentation/user/login.yml', methods=['POST'])
-def login_user():
+@app_views.route('/recipe', methods=['GET'], strict_slashes=False)
+@swag_from('documentation/user/recipe.yml', methods=['GET'])
+def get_recipe():
     """
-    logs in a user
+    gets a recipe from a list of ingredients
     """
     if not request.get_json():
         abort(400, description="Not a JSON")
-
-    if 'email' not in request.get_json():
-        abort(400, description="Missing email")
-    if 'password' not in request.get_json():
-        abort(400, description="Missing password")
+    if 'ingredients' not in request.get_json():
+        abort(400, description="ingredients missing")
     
     data = request.get_json()
-    password = data.get('password')
-
-    # Get all Users from the database
-    users_objects = storage.all(User).values()
-    #users_list = []
-    user_exist = False
-    for user in users_objects:
-        if user.check_password(password):
-            user_exist = True
-            break
+    ingredients = data.get('ingredients')
     
-    if user_exist:
-        # User exists and password is correct
-        response_data = {
-            "user_name": user.user_name,
-            "user_id": user.id,
-        }
-        return json.dumps(response_data), 200, {'ContentType': 'application/json'}
+    spooncular_api_key = '7d077305901b477ebba66bbb0c0f846e'
+    spoon_headers = {'X-Api-Key': spooncular_api_key}
+    spooncular_url = f'https://api.spoonacular.com/recipes/findByIngredients?ingredients={ingredients}&number={1}'
+    Recipe_response = requests.get(spooncular_url, headers=spoon_headers).json()
+    recipe_id = Recipe_response[0]['id']
+    recipe_name = Recipe_response[0]['title']
+    instruction_url = f"https://api.spoonacular.com/recipes/{recipe_id}/analyzedInstructions"
+    instruction_Response = requests.get(instruction_url, headers=spoon_headers).json()
+    recipe = Recipe.process_recipe_data(instruction_Response)
+    recipe['name'] = recipe_name
+    if recipe:
+        return json.dumps(recipe), 200, {'ContentType': 'application/json'}
     else:
-        # User doesn't exist or password is incorrect
-        return jsonify({"message": "Invalid username or password"}), 401
+        return jsonify({"message": "Invalid Recipe"}), 401
     
