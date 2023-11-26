@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="../static/styles/index.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script type="text/javascript" src="../static/scripts/index.js?{{ cache_id }}"></script>
         <title>Gob.AI</title>
     </head>
     <body>
@@ -24,8 +26,8 @@
              instantly generate an all-new recipe on command</p>
 
         <div class="flex-div1">
-            <input type="text" placeholder="Create a recipe for...">
-            <button id="myBtn" class="btn">Generate!</button>
+            <input type="text" placeholder="Create a recipe for..." name="enter">
+            <button id="Generatebtn" class="btn">Generate!</button>
         </div>
 
         <div class="recipe-result">
@@ -37,7 +39,7 @@
                   twist on<br> a classic curry dish that is sure to transport your
                    taste buds to paradise.</p>
 
-                   <div class="ingredients-steps">
+                <div class="ingredients-steps">
                     <div class="ingredients">
 
                         <h3 class="ingredients-h3">Ingredients</h3>
@@ -84,7 +86,7 @@
                         </ol>
                     </div>     
                 </div>
-                    <p class="result-p2">NOTE: This recipe is AI-generated and DishGen has not verified it for accuracy or safety.<br>
+                    <p class="result-p2">NOTE: This recipe is AI-generated and GOb.AI has not verified it for accuracy or safety.<br>
                     It may contain errors.Always use your best judgement when making AI-generated dishes.</p>
         </div>
         
@@ -174,6 +176,5 @@
             <p class="footer-p">Copyright @ GOb.AI 2023 **</p>
         </footer>
     </div>
-        <script src="script.js"></script>
     </body>
 </html>

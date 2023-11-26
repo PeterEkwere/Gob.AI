@@ -57,11 +57,25 @@ class Recipe(BaseModel, Base):
         """
         response_data = {
             'recipe': recipe_data[0]['name'],
-            'instructions': []
+            'instructions': [],
+            'ingredients': []
         }
         
         #Extract instructions
         for instruction_step in recipe_data[0]['steps']:
-            response_data['instructions'].append(instruction_step['step'])
+            step_info = {
+                'step': instruction_step['step']
+            }
+            
+            for ingredient in instruction_step.get('ingredients', []):
+                ingredient_info = {
+                    'id': ingredient['id'],
+                    'name': ingredient['name'],
+                    'amount': ingredient.get('amount'),
+                    'unit': ingredient.get('unit'),
+                }
+                response_data['ingredients'].append(ingredient_info)
+            
+        response_data['instructions'].append(step_info)
             
         return response_data
