@@ -99,7 +99,7 @@ in-order to use this web app make sure you have the following softwares installe
     `cat gobai_mysql_setup.sql | mysql -uroot -p` 
 
 * [Step 1] launch the Api
-    `GOBAI_MYSQL_USER=peter GOBAI_MYSQL_PWD=Peter201$ GOBAI_MYSQL_HOST=localhost GOBAI_MYSQL_DB=gobai_db   GOBAI_TYPE_STORAGE=db GOBAI_API_HOST=0.0.0.0 GOBAI_API_PORT=5001 python -m api.v1.app`
+    `GOBAI_MYSQL_USER=root GOBAI_MYSQL_PWD=root GOBAI_MYSQL_HOST=localhost GOBAI_MYSQL_DB=gobai_db   GOBAI_TYPE_STORAGE=db GOBAI_API_HOST=0.0.0.0 GOBAI_API_PORT=5001 python -m api.v1.app`
 
 * [Step 2] launch flask server
     `GOBAI_MYSQL_USER=root GOBAI_MYSQL_PWD=root GOBAI_MYSQL_HOST=localhost GOBAI_MYSQL_DB=gobai_db GOBAI_TYPE_STORAGE=db python -m Gob_dynamic.Gob_flask GOBAI_MYSQL_USER=peter GOBAI_MYSQL_PWD=Peter201$ GOBAI_MYSQL_HOST=localhost GOBAI_MYSQL_DB=gobai_db GOBAI_TYPE_STORAGE=db python -m Gob_dynamic.Gob_flask`
