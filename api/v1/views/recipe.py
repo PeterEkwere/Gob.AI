@@ -18,8 +18,8 @@ def get_recipe_from_spoocular(ingredients):
         str: a Recipe
         str: the api key
     """
-    spooncular_api_key = '7d077305901b477ebba66bbb0c0f846e'
-    spoon_headers = {'X-Api-Key': spooncular_api_key}
+    spooncular_api_key = '7e30969c7d5c40da96acab0c9f1a6526'
+    spoon_headers = {'x-api-key': spooncular_api_key}
     spooncular_url = f'https://api.spoonacular.com/recipes/findByIngredients?ingredients={ingredients}&number={1}'
     Recipe_response = requests.get(spooncular_url, headers=spoon_headers).json()
     
@@ -32,8 +32,8 @@ def get_recipe_instruct_from_spooncular(recipe_name, recipe_id):
     Args:
         recipe_name (str): This is the recipe name
     """
-    spooncular_api_key = '7d077305901b477ebba66bbb0c0f846e'
-    spoon_headers = {'X-Api-Key': spooncular_api_key}
+    spooncular_api_key = '7e30969c7d5c40da96acab0c9f1a6526'
+    spoon_headers = {'x-api-key': spooncular_api_key}
     instruction_url = f"https://api.spoonacular.com/recipes/{recipe_id}/analyzedInstructions"
     instruction_Response = requests.get(instruction_url, headers=spoon_headers).json()
     recipe = Recipe.process_recipe_data(instruction_Response)
@@ -72,12 +72,13 @@ def get_recipe():
     
     data = request.get_json()
     ingredients = data.get('ingredients')
-    if ingredients:
-        return jsonify({"message": "you got your Recipe"}), 200
+    #if ingredients:
+        #return jsonify({"message": "you got your Recipe"}), 200
     
     Recipe_response = get_recipe_from_spoocular(ingredients)
     recipe_id = Recipe_response[0]['id']
     recipe_name = Recipe_response[0]['title']
+    print(f"recipe name is {recipe_name}")
     
     tokenized_recipe = recipe_name.split()
     
@@ -85,9 +86,11 @@ def get_recipe():
        
     
     if try_recipe is None :
+        print("try Recipe is None")
         for token in tokenized_recipe:
             a_recipe = get_recipe_instruct_from_ninja(token)
             if a_recipe is None:
+                print("a Recipe is None")
                 break
             else:
                 return json.dumps(a_recipe), 200, {'ContentType': 'application/json'}
@@ -95,6 +98,7 @@ def get_recipe():
         return json.dumps(try_recipe), 200, {'ContentType': 'application/json'}
     
     if a_recipe is None:
+        print("getting recipe from spooncular")
         spoon_recipe = get_recipe_instruct_from_spooncular(recipe_name, recipe_id)
         if spoon_recipe:
             return json.dumps(spoon_recipe), 200, {'ContentType': 'application/json'}    

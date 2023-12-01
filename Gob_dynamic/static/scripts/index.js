@@ -38,8 +38,8 @@ $(document).ready(function () {
             success: function (data) {
                 
                 // Handle success response
-                console.log('Success');
-                //populateRecipeResult(data)
+                console.log('Success', data);
+                populateRecipeResult(data)
                 
             },
             error: function (error) {
@@ -59,14 +59,19 @@ $(document).ready(function () {
 
     function populateRecipeResult(responseData) {
 
+        console.log("Response Data type  is ")
+        console.log(typeof responseData);
         // Parse the JSON string to an array of objects
         const recipes = JSON.parse(JSON.parse(responseData));
-
+        console.log("type of recipes are")
+        console.log(typeof recipes);
         // Get a random index
         const randomIndex = Math.floor(Math.random() * recipes.length);
 
         // Access the first recipe
         const firstRecipe = recipes[randomIndex];
+        console.log(typeof firstRecipe);
+        console.log("first recipe is ", firstRecipe)
        
         // Extract relevant information
         const recipeName = firstRecipe.title;
