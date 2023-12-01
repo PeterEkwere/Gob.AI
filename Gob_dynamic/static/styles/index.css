@@ -1,3 +1,76 @@
+/* KEYFRAMES */
+
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
+  
+  @keyframes configure-clockwise {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes configure-xclockwise {
+    0% {
+      transform: rotate(45deg);
+    }
+    25% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-135deg);
+    }
+    75% {
+      transform: rotate(-225deg);
+    }
+    100% {
+      transform: rotate(-315deg);
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: .25;
+      transform: scale(.75);
+    }
+  }
+
+
+
+
+
+
+
 body{
 
     margin: 0;
@@ -160,7 +233,7 @@ input{
 .margin{
 
     border: 1px solid #777777;
-    margin-left: 28%;
+    margin-left: 30%;
     margin-top: 100px;
     width: 550px;
     margin-bottom: 50px;
@@ -169,7 +242,7 @@ input{
 
 .container{
    display: flex;
-   margin-left: 5%;
+   margin-left: 10%;
    
 }
 
@@ -360,6 +433,28 @@ h3{
     font-weight: 600;
 }
 
+.three-quarter-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fb5b53;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin .5s linear 0s infinite;
+}
+  
+.spinner-box {
+    display: none; /* Initially hide the spinner */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 .footer{
 
     background-color: #000;
@@ -396,7 +491,7 @@ h4{
     background-color: #f7f8fa;
     border-radius: 10px;
     width: 900px;
-    display: block;
+    display: none;
     margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
@@ -462,10 +557,6 @@ li{
     border-bottom: 1px solid white;
     padding-bottom: 8px;
 }
-
-
-
-
 
 
 

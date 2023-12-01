@@ -25,12 +25,17 @@
         <p class="p1">Simply type a recipe idea or some ingredients you have on hand and DishGen's AI will<br>
              instantly generate an all-new recipe on command</p>
 
+        
         <div class="flex-div1">
             <input type="text" placeholder="Create a recipe for..." name="enter">
             <button id="Generatebtn" class="btn">Generate!</button>
         </div>
+        
+        <div id="loading-spinner" class="spinner-box">
+            <div class="three-quarter-spinner"></div>
+        </div>
 
-        <div class="recipe-result">
+        <div id="result-recipe" class="recipe-result">
             <h2 class="result-h2">Mango Curry Rice</h2>
             <p class="result-p1">Experience the perfect blend of sweet and spicy with this delectable
                  mango curry rice recipe. Tender chunks of mango, aromatic spices,<br>

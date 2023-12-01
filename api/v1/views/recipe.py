@@ -72,6 +72,8 @@ def get_recipe():
     
     data = request.get_json()
     ingredients = data.get('ingredients')
+    if ingredients:
+        return jsonify({"message": "you got your Recipe"}), 200
     
     Recipe_response = get_recipe_from_spoocular(ingredients)
     recipe_id = Recipe_response[0]['id']

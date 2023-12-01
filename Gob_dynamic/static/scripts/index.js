@@ -1,11 +1,25 @@
 $(document).ready(function () {
-    //function showLoadingSpinner(){
-        //$("#loading-spinner").show();
-    //}
+    function showLoadingSpinner(){
+        $("#loading-spinner").show();
+    }
 
+    // Function to hide the loading spinner
+    function hideLoadingSpinner() {
+        $("#loading-spinner").hide();
+    }
+
+    // Function to show the recipe result
+    function showRecipeResult() {
+        $("#result-recipe").show();
+    }
+    // Funtion to hide recipe result
+    function hideRecipeResult() {
+        $("#result-recipe").hide()
+    }
     // Event listener for the submit button
     $("#Generatebtn").on("click", function () {
-        //showLoadingSpinner()
+        showLoadingSpinner();
+        hideRecipeResult();
         submitForm();
     })
 
@@ -24,20 +38,21 @@ $(document).ready(function () {
             success: function (data) {
                 
                 // Handle success response
-                //console.log('Success', data);
-                populateRecipeResult(data)
+                console.log('Success');
+                //populateRecipeResult(data)
                 
             },
             error: function (error) {
                 // Handle error response
                 console.log("Error:", error);
             },
-            //complete: function () {
-                // Hide the loading spinner after 7 seconds
-                //setTimeout(function () {
-                    //hideLoadingSpinner();
-                //}, 7000);
-            //},
+            complete: function () {
+                //Hide the loading spinner after 7 seconds
+                setTimeout(function () {
+                    hideLoadingSpinner();
+                    showRecipeResult();
+                }, 5000);
+            },
         });
 
     }

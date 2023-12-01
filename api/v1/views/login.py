@@ -9,6 +9,16 @@ from api.v1.views import app_views
 from flask import abort, jsonify, make_response, request
 from flasgger.utils import swag_from
 import json
+from os import getenv
+
+storage_type = getenv("GOBAI_TYPE_STORAGE")
+if storage_type == 'db':
+    from models.engine.db_storage import DBStorage
+    storage = DBStorage()
+else:
+    from models.engine.file_storage import FileStorage
+    storage = FileStorage()
+
 
 
 @app_views.route('/login', methods=['POST'], strict_slashes=False)
