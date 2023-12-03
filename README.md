@@ -105,6 +105,7 @@ in-order to use this web app make sure you have the following softwares installe
     `GOBAI_MYSQL_USER=root GOBAI_MYSQL_PWD=root GOBAI_MYSQL_HOST=localhost GOBAI_MYSQL_DB=gobai_db GOBAI_TYPE_STORAGE=db python -m Gob_dynamic.Gob_flask GOBAI_MYSQL_USER=peter GOBAI_MYSQL_PWD=Peter201$ GOBAI_MYSQL_HOST=localhost GOBAI_MYSQL_DB=gobai_db GOBAI_TYPE_STORAGE=db python -m Gob_dynamic.Gob_flask`
 
 * [Step 3] Open Your WebBrowser and type `http://127.0.0.1:5000/Home/` and vuala you can now access GobAI🥳
+* ![GObAI](https://github.com/PeterEkwere/Gob.AI/blob/master/Gob_dynamic/static/img/dsd.PNG)
     And if you cant access the website No need to worry, you can check  #bugs if your issue and solution is there if not you can open an issue
 
 
